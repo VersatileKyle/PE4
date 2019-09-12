@@ -60,7 +60,7 @@ PS1="[$PURPLE_COLOR\]\w"          # base of your PS 1
 PS1+="\[$GREEN_COLOR\]\$(git_branch)"     # prints current branch
 PS1+="\[$BLUE_COLOR\]\$(git_indicator)"   #indicates git status
 PS1+="\[$RED_COLOR\] KyleS \$\[$RESET\] " 
-echo $PS1
+#echo $PS1
 
 
 
