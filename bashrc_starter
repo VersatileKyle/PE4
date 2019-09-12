@@ -19,7 +19,7 @@ PURPLE_COLOR="\e[0;35m"
 function git_indicator {
     local git_status="$(git status --porcelain 2> /dev/null)"  # redirect stderr to /dev/null -- we just need it in this variable
 
-    echo $git_status # will help you decide what strings to test for, remove it later
+    #echo $git_status # will help you decide what strings to test for, remove it later
 
     #echo -ne "Console" # as an example, see how echoing text here changes your prompt
 
@@ -32,7 +32,7 @@ function git_indicator {
     # hearts content 
     
     
-    if [[ $git_status =~ "" ]]; then
+    if [[ $git_status != "" ]]; then
         echo -ne " * " # represents dirty repo
     else
         echo -ne "clean"
