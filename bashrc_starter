@@ -31,11 +31,10 @@ function git_indicator {
     # the following if statements are examples -- fill them in, rearrange them, etc to your
     # hearts content 
     
-    
-    if [[ $git_status =~ "clean" ]]; then
-        echo -ne "" 
+    if [[ ! $git_status =~ "clean" ]] && [[ ! $git_status == "" ]]; then
+        echo -ne "*" 
     else
-        echo -ne " * "
+        echo -ne " "
     fi
 }
 
