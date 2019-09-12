@@ -33,9 +33,10 @@ function git_indicator {
     # hearts content 
     
     
-    if [[! $git_status =~ "clean" ]]; then
-        echo -ne " * " # * represents clean repo
-    #else clean
+    if [[$git_status =~ "clean" ]]; then
+        echo -ne "" # * represents clean repo
+    else
+        echo -ne " * "
     fi
 }
 
