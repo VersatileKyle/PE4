@@ -23,7 +23,6 @@ function git_indicator {
 
     #echo -ne "Console" # as an example, see how echoing text here changes your prompt
 
-    local git_status2="$(git diff HEAD)"
     # insert strings to test for in the if statements below
     # example of using an "and" (&&)
     # =~ means "contains"
