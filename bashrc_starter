@@ -33,9 +33,8 @@ function git_indicator {
     
     
     if [[ $git_status != "" ]]; then
-        echo -ne " * " # represents dirty repo
-    else
-        echo -ne "clean"
+        echo -ne " * " # * represents dirty repo
+    # if it's clean, then no additional echo
     fi
 }
 
