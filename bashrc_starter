@@ -32,9 +32,10 @@ function git_indicator {
     # hearts content 
     
     
-    if [[ $git_status != "" ]]; then
+    if [[ $git_status =~ "up to date" ]]; then
+        echo -ne " - " # - represents clean repo
+    else
         echo -ne " * " # * represents dirty repo
-    # if it's clean, then no additional echo
     fi
 }
 
