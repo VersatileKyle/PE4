@@ -34,7 +34,7 @@ function git_indicator {
     # hearts content 
     
     
-    if [[ $git_status2 != "" ]]; then
+    if [[ $(git diff HEAD) != "" ]]; then
         echo -ne " * " # * represents dirty repo
     fi
 }
