@@ -17,7 +17,7 @@ BLUE_COLOR="\e[0;34m"
 PURPLE_COLOR="\e[0;35m"
 
 function git_indicator {
-    local git_status="$(git status --porcelain 2> /dev/null)"  # redirect stderr to /dev/null -- we just need it in this variable
+    local git_status="$(git status 2> /dev/null)"  # redirect stderr to /dev/null -- we just need it in this variable
 
     #echo $git_status # will help you decide what strings to test for, remove it later
 
